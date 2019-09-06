@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class assignment2b{
+	public static void main(String [] args){
+		Scanner Input=new Scanner(System.in);
+		String item1;
+		String item2;
+		String item3;
+		int quantity1;
+		int quantity2;
+		int quantity3;
+		double price1;
+		double price2;
+		double price3;
+		double subtotal;
+		double tax;
+		double total;
+		double item_total1;
+		double item_total2;
+		double item_total3;
+		System.out.print("Input name of item1:\n");
+		item1=Input.next();
+		System.out.print("Input quantity of item1:\n");
+		quantity1=Input.nextInt();
+		System.out.print("Input price of item1:\n");
+		price1=Input.nextDouble();
+		System.out.print("Input name of item2:\n");
+		item2=Input.next();
+		System.out.print("Input quantity of item2:\n");
+		quantity2=Input.nextInt();
+		System.out.print("Input price of item2:\n");
+		price2=Input.nextDouble();
+		System.out.print("Input name of item3:\n");
+		item3=Input.next();
+		System.out.print("Input quantity of item3:\n");
+		quantity3=Input.nextInt();
+		System.out.print("Input price of item3:\n");
+		price3=Input.nextDouble();
+		item_total1=quantity1*price1;
+		item_total2=quantity2*price2;
+		item_total3=quantity3*price3;
+		subtotal=item_total1+item_total2+item_total3;
+		tax=subtotal*0.0625;
+		total=subtotal+tax;
+		System.out.println("Your bill:");
+		System.out.printf("%-30s %-10s %-10s %-10s%n","Item","Quantity","Price","Total");
+		System.out.printf("%-30s %-10d %-10.2f %-10.2f%n",item1,quantity1,price1,item_total1);
+		System.out.printf("%-30s %-10d %-10.2f %-10.2f%n",item2,quantity2,price2,item_total2);
+		System.out.printf("%-30s %-10d %-10.2f %-10.2f%n",item3,quantity3,price3,item_total3);
+		System.out.printf("%-30s %-10s %-10s %-10.2f%n","Subtotal","","",subtotal);
+		System.out.printf("%-30s %-10s %-10s %-10.2f%n","6.25% Sales Tax","","",tax);
+		System.out.printf("%-30s %-10s %-10s %-10.2f%n","Total","","",total);
+	}
+}
